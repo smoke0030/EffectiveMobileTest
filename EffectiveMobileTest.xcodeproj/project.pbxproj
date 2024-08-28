@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		8443D01F2C78AE910013E38C /* EffectiveMobileTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D01E2C78AE910013E38C /* EffectiveMobileTestApp.swift */; };
-		8443D0212C78AE910013E38C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D0202C78AE910013E38C /* ContentView.swift */; };
+		8443D0212C78AE910013E38C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D0202C78AE910013E38C /* MainView.swift */; };
 		8443D0232C78AE950013E38C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443D0222C78AE950013E38C /* Assets.xcassets */; };
 		8443D0262C78AE950013E38C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443D0252C78AE950013E38C /* Preview Assets.xcassets */; };
+		8443D02D2C78AF010013E38C /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D02C2C78AF000013E38C /* TODO.swift */; };
+		8443D0312C78B5D40013E38C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D0302C78B5D40013E38C /* ViewModel.swift */; };
+		8443D0332C7A36E50013E38C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D0322C7A36E40013E38C /* NetworkService.swift */; };
+		8443D0362C7A653A0013E38C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8443D0352C7A653A0013E38C /* Alamofire */; };
+		8443D0382C7A653A0013E38C /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8443D0372C7A653A0013E38C /* AlamofireDynamic */; };
+		8443D03B2C7E3FC50013E38C /* TodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8443D0392C7E3FC50013E38C /* TodoDataModel.xcdatamodeld */; };
+		8443D03D2C7E41A80013E38C /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D03C2C7E41A80013E38C /* TodoStore.swift */; };
+		8443D03F2C7E54170013E38C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D03E2C7E54160013E38C /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8443D01B2C78AE910013E38C /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8443D01E2C78AE910013E38C /* EffectiveMobileTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectiveMobileTestApp.swift; sourceTree = "<group>"; };
-		8443D0202C78AE910013E38C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8443D0202C78AE910013E38C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8443D0222C78AE950013E38C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8443D0252C78AE950013E38C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8443D02C2C78AF000013E38C /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
+		8443D0302C78B5D40013E38C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8443D0322C7A36E40013E38C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8443D03A2C7E3FC50013E38C /* TodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoDataModel.xcdatamodel; sourceTree = "<group>"; };
+		8443D03C2C7E41A80013E38C /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
+		8443D03E2C7E54160013E38C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8443D0362C7A653A0013E38C /* Alamofire in Frameworks */,
+				8443D0382C7A653A0013E38C /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +68,14 @@
 			isa = PBXGroup;
 			children = (
 				8443D01E2C78AE910013E38C /* EffectiveMobileTestApp.swift */,
-				8443D0202C78AE910013E38C /* ContentView.swift */,
+				8443D0422C7F165E0013E38C /* Model */,
+				8443D0412C7F16540013E38C /* ViewModel */,
+				8443D0402C7F163D0013E38C /* Views */,
 				8443D0222C78AE950013E38C /* Assets.xcassets */,
 				8443D0242C78AE950013E38C /* Preview Content */,
+				8443D0392C7E3FC50013E38C /* TodoDataModel.xcdatamodeld */,
+				8443D0442C7F16900013E38C /* Services */,
+				8443D0432C7F167A0013E38C /* CoreData */,
 			);
 			path = EffectiveMobileTest;
 			sourceTree = "<group>";
@@ -65,6 +86,47 @@
 				8443D0252C78AE950013E38C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8443D0402C7F163D0013E38C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8443D0202C78AE910013E38C /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8443D0412C7F16540013E38C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8443D0302C78B5D40013E38C /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8443D0422C7F165E0013E38C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8443D02C2C78AF000013E38C /* TODO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8443D0432C7F167A0013E38C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8443D03C2C7E41A80013E38C /* TodoStore.swift */,
+				8443D03E2C7E54160013E38C /* Persistence.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8443D0442C7F16900013E38C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8443D0322C7A36E40013E38C /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +145,10 @@
 			dependencies = (
 			);
 			name = EffectiveMobileTest;
+			packageProductDependencies = (
+				8443D0352C7A653A0013E38C /* Alamofire */,
+				8443D0372C7A653A0013E38C /* AlamofireDynamic */,
+			);
 			productName = EffectiveMobileTest;
 			productReference = 8443D01B2C78AE910013E38C /* EffectiveMobileTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 8443D0122C78AE910013E38C;
+			packageReferences = (
+				8443D0342C7A653A0013E38C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8443D01C2C78AE910013E38C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8443D0212C78AE910013E38C /* ContentView.swift in Sources */,
+				8443D0332C7A36E50013E38C /* NetworkService.swift in Sources */,
+				8443D03F2C7E54170013E38C /* Persistence.swift in Sources */,
+				8443D0212C78AE910013E38C /* MainView.swift in Sources */,
 				8443D01F2C78AE910013E38C /* EffectiveMobileTestApp.swift in Sources */,
+				8443D03B2C7E3FC50013E38C /* TodoDataModel.xcdatamodeld in Sources */,
+				8443D0312C78B5D40013E38C /* ViewModel.swift in Sources */,
+				8443D03D2C7E41A80013E38C /* TodoStore.swift in Sources */,
+				8443D02D2C78AF010013E38C /* TODO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +419,44 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8443D0342C7A653A0013E38C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8443D0352C7A653A0013E38C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8443D0342C7A653A0013E38C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8443D0372C7A653A0013E38C /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8443D0342C7A653A0013E38C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8443D0392C7E3FC50013E38C /* TodoDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8443D03A2C7E3FC50013E38C /* TodoDataModel.xcdatamodel */,
+			);
+			currentVersion = 8443D03A2C7E3FC50013E38C /* TodoDataModel.xcdatamodel */;
+			name = TodoDataModel.xcdatamodeld;
+			path = /Users/admin/Desktop/App/EffectiveMobileTest/EffectiveMobileTest/TodoDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8443D0132C78AE910013E38C /* Project object */;
 }
