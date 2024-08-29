@@ -16,4 +16,5 @@ struct TODO: Decodable {
     var todo: String
     var completed: Bool
     var userId: Int
+    var date: Date?
 }

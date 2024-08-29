@@ -19,6 +19,7 @@
 		8443D03B2C7E3FC50013E38C /* TodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8443D0392C7E3FC50013E38C /* TodoDataModel.xcdatamodeld */; };
 		8443D03D2C7E41A80013E38C /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D03C2C7E41A80013E38C /* TodoStore.swift */; };
 		8443D03F2C7E54170013E38C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D03E2C7E54160013E38C /* Persistence.swift */; };
+		8443D0472C806A9B0013E38C /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8443D0462C806A9B0013E38C /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8443D0472C806A9B0013E38C /* ProgressHUD in Frameworks */,
 				8443D0362C7A653A0013E38C /* Alamofire in Frameworks */,
 				8443D0382C7A653A0013E38C /* AlamofireDynamic in Frameworks */,
 			);
@@ -148,6 +150,7 @@
 			packageProductDependencies = (
 				8443D0352C7A653A0013E38C /* Alamofire */,
 				8443D0372C7A653A0013E38C /* AlamofireDynamic */,
+				8443D0462C806A9B0013E38C /* ProgressHUD */,
 			);
 			productName = EffectiveMobileTest;
 			productReference = 8443D01B2C78AE910013E38C /* EffectiveMobileTest.app */;
@@ -179,6 +182,7 @@
 			mainGroup = 8443D0122C78AE910013E38C;
 			packageReferences = (
 				8443D0342C7A653A0013E38C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8443D0452C806A9B0013E38C /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 8443D01C2C78AE910013E38C /* Products */;
 			projectDirPath = "";
@@ -429,6 +433,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		8443D0452C806A9B0013E38C /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -441,6 +453,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8443D0342C7A653A0013E38C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		8443D0462C806A9B0013E38C /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8443D0452C806A9B0013E38C /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 

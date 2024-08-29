@@ -33,7 +33,7 @@ final class TodoStore: NSObject {
     
     
     //поиск задач в базе
-    func fetchTodo() -> [TodoCoreData]? {
+    func fetchTodo() -> [TodoCoreData] {
         let request = fetchRequest()
         var todos: [TodoCoreData] = []
         request.returnsObjectsAsFaults = false
@@ -46,7 +46,7 @@ final class TodoStore: NSObject {
         return todos
     }
     
-    func fetchTodo(with id: Int) -> TodoCoreData? {
+    func fetchTodo(with id: Int) -> TodoCoreData {
         let request = fetchRequest()
         var object: [TodoCoreData] = []
         request.predicate = NSPredicate(format: "id == %d", id)
@@ -56,7 +56,7 @@ final class TodoStore: NSObject {
             assertionFailure("failed search from CoreData, \(error.localizedDescription)")
         }
         
-        return object.first
+        return object[0]
     }
     
     //метод для извлечения пути к базе(для просмотра через DB browses for SQLite)
@@ -74,22 +74,38 @@ final class TodoStore: NSObject {
             let name = todo.name ?? ""
             let userId = Int(todo.usedId)
             let isCompleted = todo.isCompleted
+            guard let date = todo.date else {
+                print("failed of create date")
+                continue
+            }
             
-            let newTodo = TODO(id: id, todo: name, completed: isCompleted, userId: userId)
+            let newTodo = TODO(id: id, todo: name, completed: isCompleted, userId: userId, date: date)
             returnedTodos.append(newTodo)
         }
         return returnedTodos
     }
     
     //добавление задачи в базу
-    func addTodo(id: Int16, name: String) {
+    func addTodo(id: Int16, name: String, date: Date) {
         let newTodo = TodoCoreData(context: context)
         newTodo.id = id
         newTodo.name = name
         newTodo.isCompleted = false
-        newTodo.usedId = Int16(1012)
+        newTodo.usedId = newTodo.usedId
+        newTodo.date = date
         
-       saveContext()
+        saveContext()
+    }
+    
+    func addTodo(todo: TODO) {
+        let newTodo = TodoCoreData(context: context)
+        newTodo.id = Int16(todo.id)
+        newTodo.name = todo.todo
+        newTodo.isCompleted = todo.completed
+        newTodo.usedId = Int16(todo.userId)
+        newTodo.date = Date()
+        
+        saveContext()
     }
     
     //удаление задачи из базы
@@ -106,10 +122,15 @@ final class TodoStore: NSObject {
     }
     
     func completeTodo(todo: TODO) {
-        if let object = fetchTodo(with: todo.id) {
-            object.isCompleted.toggle()
-        }
+        let editingObject = fetchTodo(with: todo.id)
+        editingObject.isCompleted.toggle()
         saveContext()
+    }
+    
+    func editTodo(id: Int, newName: String) {
+       let editingObject = fetchTodo(with: id)
+        editingObject.name = newName
         
+        saveContext()
     }
 }

@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
   
-
 final class NetworkService {
     
     static let shared = NetworkService()
@@ -17,17 +16,18 @@ final class NetworkService {
     private let url = "https://dummyjson.com/todos"
     
     func getData(completion: @escaping (Result<Response, Error>) -> Void) {
-        if let url = URL(string: url) {
-            AF.request(url).responseDecodable(of: Response.self) { response in
-                switch response.result {
-                case .success(let object):
-                    completion(.success(object))
-                case .failure(let error):
-                    completion(.failure(error))
+        DispatchQueue.global().async {
+            
+            if let url = URL(string: self.url) {
+                AF.request(url).responseDecodable(of: Response.self) { response in
+                    switch response.result {
+                    case .success(let object):
+                        completion(.success(object))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
                 }
             }
         }
-        
     }
-
 }
