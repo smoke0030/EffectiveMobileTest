@@ -20,7 +20,18 @@
 		8443D03D2C7E41A80013E38C /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D03C2C7E41A80013E38C /* TodoStore.swift */; };
 		8443D03F2C7E54170013E38C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D03E2C7E54160013E38C /* Persistence.swift */; };
 		8443D0472C806A9B0013E38C /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8443D0462C806A9B0013E38C /* ProgressHUD */; };
+		8443D04F2C8071120013E38C /* EffectiveMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443D04E2C8071120013E38C /* EffectiveMobileTestTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8443D0502C8071120013E38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8443D0132C78AE910013E38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8443D01A2C78AE910013E38C;
+			remoteInfo = EffectiveMobileTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8443D01B2C78AE910013E38C /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +45,8 @@
 		8443D03A2C7E3FC50013E38C /* TodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8443D03C2C7E41A80013E38C /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		8443D03E2C7E54160013E38C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8443D04C2C8071110013E38C /* EffectiveMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectiveMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8443D04E2C8071120013E38C /* EffectiveMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectiveMobileTestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8443D0492C8071110013E38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				8443D01D2C78AE910013E38C /* EffectiveMobileTest */,
+				8443D04D2C8071120013E38C /* EffectiveMobileTestTests */,
 				8443D01C2C78AE910013E38C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				8443D01B2C78AE910013E38C /* EffectiveMobileTest.app */,
+				8443D04C2C8071110013E38C /* EffectiveMobileTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +153,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8443D04D2C8071120013E38C /* EffectiveMobileTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				8443D04E2C8071120013E38C /* EffectiveMobileTestTests.swift */,
+			);
+			path = EffectiveMobileTestTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +186,24 @@
 			productReference = 8443D01B2C78AE910013E38C /* EffectiveMobileTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8443D04B2C8071110013E38C /* EffectiveMobileTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8443D0522C8071120013E38C /* Build configuration list for PBXNativeTarget "EffectiveMobileTestTests" */;
+			buildPhases = (
+				8443D0482C8071110013E38C /* Sources */,
+				8443D0492C8071110013E38C /* Frameworks */,
+				8443D04A2C8071110013E38C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8443D0512C8071120013E38C /* PBXTargetDependency */,
+			);
+			name = EffectiveMobileTestTests;
+			productName = EffectiveMobileTestTests;
+			productReference = 8443D04C2C8071110013E38C /* EffectiveMobileTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +216,10 @@
 				TargetAttributes = {
 					8443D01A2C78AE910013E38C = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					8443D04B2C8071110013E38C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8443D01A2C78AE910013E38C;
 					};
 				};
 			};
@@ -189,6 +241,7 @@
 			projectRoot = "";
 			targets = (
 				8443D01A2C78AE910013E38C /* EffectiveMobileTest */,
+				8443D04B2C8071110013E38C /* EffectiveMobileTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +253,13 @@
 			files = (
 				8443D0262C78AE950013E38C /* Preview Assets.xcassets in Resources */,
 				8443D0232C78AE950013E38C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8443D04A2C8071110013E38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +281,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8443D0482C8071110013E38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443D04F2C8071120013E38C /* EffectiveMobileTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8443D0512C8071120013E38C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8443D01A2C78AE910013E38C /* EffectiveMobileTest */;
+			targetProxy = 8443D0502C8071120013E38C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8443D0272C78AE950013E38C /* Debug */ = {
@@ -401,6 +477,42 @@
 			};
 			name = Release;
 		};
+		8443D0532C8071120013E38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U423669TKH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sv.EffectiveMobileTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveMobileTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EffectiveMobileTest";
+			};
+			name = Debug;
+		};
+		8443D0542C8071120013E38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U423669TKH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sv.EffectiveMobileTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveMobileTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EffectiveMobileTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,6 +530,15 @@
 			buildConfigurations = (
 				8443D02A2C78AE950013E38C /* Debug */,
 				8443D02B2C78AE950013E38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8443D0522C8071120013E38C /* Build configuration list for PBXNativeTarget "EffectiveMobileTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8443D0532C8071120013E38C /* Debug */,
+				8443D0542C8071120013E38C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

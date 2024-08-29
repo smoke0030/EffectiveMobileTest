@@ -5,7 +5,7 @@
 //  Created by Сергей on 27.08.2024.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
 final class TodoStore: NSObject {
