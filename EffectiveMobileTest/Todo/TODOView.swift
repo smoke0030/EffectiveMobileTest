@@ -6,8 +6,12 @@ struct TODOView: View {
     
     var body: some View {
         NavigationView {
+            VStack {
+                TextField("Search...", text: $presenter.searchText)
+                    .padding(10)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             List {
-                ForEach(presenter.todos, id: \.id) { todo in
+                ForEach(presenter.filteredItems, id: \.id) { todo in
                     HStack {
                         VStack(alignment: .leading) {
                             Text(todo.todo)
@@ -34,7 +38,7 @@ struct TODOView: View {
                         
                         Button(role: .destructive) {
                             guard let index = presenter.todos.firstIndex(where: { $0.id == todo.id }) else { return }
-                             let indexSet = IndexSet(integer: index)
+                            let indexSet = IndexSet(integer: index)
                             presenter.deleteTodo(with: indexSet)
                         } label: {
                             Text("Delete")
@@ -63,6 +67,7 @@ struct TODOView: View {
             .onAppear {
                 presenter.getTodos()
             }
+        }
         }
     }
     

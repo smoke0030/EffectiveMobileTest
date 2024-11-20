@@ -11,8 +11,17 @@ class TODOPresenter: ObservableObject, TodoPresenterProtocol {
     @Published var todos: [TodoModel] = []
     @Published var isPresentedAlert = false
     @Published var name = ""
+    @Published var searchText = ""
     @Published var isEditing = false
     @Published var editingTodo: TodoModel?
+    
+    var filteredItems: [TodoModel] {
+        if searchText.isEmpty {
+            return todos
+        } else {
+            return todos.filter({ $0.todo.lowercased().contains(searchText.lowercased() )})
+        }
+    }
     
     var interactor: TODOInteractorProtocol
     
